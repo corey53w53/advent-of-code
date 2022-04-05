@@ -3,7 +3,6 @@ input = "ckczppom"
 counter=0
 p1=True
 while True:
-    counter+=1
     c=str(counter)
     hash=input+c
     result = hashlib.md5(hash.encode()).hexdigest()
@@ -13,3 +12,4 @@ while True:
     if result[0:6]=="000000":
         print(f'part 2: {counter}')
         exit()
+    counter+=1
