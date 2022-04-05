@@ -1005,5 +1005,4 @@ for i in input.splitlines():
     p2+=((2*(l+w+h-max([l,w,h])))+(l*w*h))
     dl=sorted([2*l*w,2*l*h,2*w*h])
     p1=p1+sum(dl)+dl[0]//2
-print(f'Part 1 solution: {p1}')
-print(f'Part 2 solution: {p2}')
+print(f'Part 1 solution: {p1}\nPart 2 solution: {p2}')
