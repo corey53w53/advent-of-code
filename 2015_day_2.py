@@ -999,13 +999,17 @@ input="""20x3x11
 21x2x22
 14x12x8"""
 p1=0
+p2=0
 input=input.split("\n")
 for i in input:
     il=[int(a) for a in i.split("x")]
     min=sorted(il)[0]
-    print(min)
     l,w,h=il[0],il[1],il[2]
+    ribbon=2*(l+w+h-max([l,w,h]))
+    bow=l*w*h
+    p2=p2+ribbon+bow
     dl=[2*l*w,2*l*h,2*w*h]
     dl.sort()
     p1=p1+sum(dl)+dl[0]//2
 print(p1)
+print(p2)
